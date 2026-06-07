@@ -11,6 +11,11 @@ const tools = [
     description: '生成随机 UUID',
   },
   {
+    name: 'Dice',
+    path: '/dice',
+    description: '掷骰子，返回 1-6 随机数（支持 ?min=&max= 参数）',
+  },
+  {
     name: 'Multi-WeChat',
     path: 'https://multi-wechat.dengchao.fun',
     description: '微信多开工具',
