@@ -10,6 +10,12 @@ const tools = [
     path: '/uuid',
     description: '生成随机 UUID',
   },
+  {
+    name: 'Multi-WeChat',
+    path: 'https://multi-wechat.dengchao.fun',
+    description: '微信多开工具',
+    external: true,
+  },
 ]
 </script>
 
@@ -23,6 +29,8 @@ const tools = [
         <li v-for="tool in tools" :key="tool.path">
           <a
             :href="tool.path"
+            :target="tool.external ? '_blank' : undefined"
+            :rel="tool.external ? 'noopener noreferrer' : undefined"
             class="block p-6 bg-white rounded-lg shadow hover:shadow-md transition-shadow"
           >
             <h2 class="text-xl font-semibold text-gray-800 mb-2">
